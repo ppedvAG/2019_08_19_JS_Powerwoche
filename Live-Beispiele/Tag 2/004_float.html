@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+    <style>
+        .test01,
+        .test02,
+        .test03,
+        .test04,
+        .test05 {
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+
+        .test01 {
+            background-color: gold;
+        }
+
+        .test02 {
+            background-color: greenyellow;
+        }
+
+        .test03 {
+            background-color: mediumseagreen;
+        }
+
+        .test04 {
+            background-color: turquoise;
+        }
+
+        .test05 {
+            background-color: steelblue;
+        }
+
+        .float-container{
+            background-color: beige;
+        }
+
+        /* .clearboth{
+            clear: both;
+        } */
+
+        .float-container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .nofloat {
+            height: 250px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="float-container">
+        <div class="test01"></div>
+        <div class="test02"></div>
+        <div class="test03"></div>
+        <div class="test04"></div>
+        <div class="test05"></div>
+       <!--  <div class="clearboth"></div> -->
+    </div>
+    <div class="nofloat">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quos corrupti vero similique minima nisi
+        nobis, totam veritatis hic architecto.
+    </div>
+</body>
+
+</html>

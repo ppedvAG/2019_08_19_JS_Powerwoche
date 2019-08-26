@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>slide-effects</title>
+    <style>
+        button{
+            margin-bottom: 20px;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+        }
+
+        #demo04{
+            display: none;
+        }
+
+        div:nth-child(odd){
+            background-color: forestgreen;
+        }
+
+        div:nth-child(even){
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-stop">Stop</button>
+    <button id="btn-finish">Finish</button>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+    <div id="demo05">5</div>
+    <div id="demo06">6</div>
+
+    <script>
+        
+        $(document).ready(function(){
+
+            $('#demo01').click(function(){
+                $('#demo02').slideUp(5000);
+            });
+
+            $('#demo03').click(function(){
+                $('#demo04').slideDown('fast', function(){
+                    alert('Div 4 ist jetzt sichtbar!');
+                });
+            });
+
+            $('#demo05').click(function(){
+                $(this).next().slideToggle('fast');
+            });
+
+            $('#btn-stop').click(function(){
+                $('#demo02').stop();
+            });
+
+            $('#btn-finish').click(function(){
+                $('#demo02').finish();
+            });
+
+            /* 
+                        var myArray = document.getElementsByTagName('div');
+                        for(var i = 0; i < myArray.length; i++){
+                            myArray[i].style.backgroundColor = "red";
+                        }
+            */
+
+             
+
+            $('div').click(function(){
+                // console.log('Hab draufgeklickt.'); 
+
+                $(this).css('background-color', 'red');
+
+            });
+
+
+            // .next()
+            
+            
+
+
+
+
+        });
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html><!-- doctype declaration; "hier kommt ein html Dokument" -->
+<html lang="de"><!-- darin liegt das html Dokument; lang gibt die Sprache an -->
+
+<head><!-- im head sind Metainformationen für den Browser -->
+    <title>HTML-Basics</title>
+    <link rel="stylesheet" href="001_Basics.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <script src="dateipfad_zu_meinem_js.js" defer></script>
+    <style>
+        .test {
+            width: 90px;
+            border: 2px solid green;
+        }
+        .red{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Kommentar in HTML -->
+    <!-- alt + shift + a -->
+    <!-- einzeilig
+             und auch mehrzeilige Kommentare -->
+
+    <h1>Überschrift h1</h1>
+    <!-- <h2>Überschrift h2</h2>
+        <h6>Überschrift h6</h6> -->
+    <div>
+        "Division"-Tag
+    </div>
+    <div>
+        Das ist auch ein Div
+    </div>
+
+    <div>
+        <div>
+
+        </div>
+    </div>
+
+    <p>
+        Das ist ein <a href="https://google.com" target="_blank">Paragraph</a> (Absatz).
+        <!-- target="_blank" öffnet den Link in einem neuen Tab -->
+    </p>
+    <p>
+        Das ist auch ein Absatz. <br>
+        Noch ein Satz.
+        <span class="red">
+            Noch einer.
+        </span>
+    </p>
+    <div class="test">
+        Donau&shy;dampf&shy;schiff&shy;fahrts&shy;ge&shy;sell&shy;schaft
+        <!-- shy steht für soft hyphens; an dieser Stelle darf eine 
+            Worttrennung stattfinden, sollte sich das Wort in seinem Container 
+            nicht ausgehen -->
+        <hr />
+    </div>
+
+    <hr>
+
+    <b>bold</b>
+    <i>italic</i>
+    <em>emphasis</em>
+    <strong>strong</strong>
+
+
+    <!-- Auszeichnungstags/ semantische Elemente -->
+    <section>
+        <h2>Überschrift h2</h2>
+    </section>
+    <article></article>
+    <header></header>
+    <nav></nav>
+    <footer></footer>
+    <aside></aside>
+
+
+    &uuml;
+    Ü
+    ☎
+    ☃
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, reprehenderit.
+        <!-- lorem10 = Lorem ipsum Text aus 10 Worten -->
+    </div>
+
+    <br />
+
+    <img src="../images/tromboneplayer.jpg" alt="tromboneplayer"/>
+
+    <!-- <script src="dateipfad_zu_meinem_js.js"></script> -->
+</body>
+
+</html>

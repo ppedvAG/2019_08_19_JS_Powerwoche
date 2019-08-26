@@ -1,0 +1,45 @@
+body{
+    font-size: 16px;
+    /* background-color: darkorange; */
+}
+
+
+/* Typselektor */
+p{
+    color: rgb(255, 0, 0);
+    /*     red 
+
+          #  ff 00 00
+             255 0 0 
+          15*16^1 = 225    15* 16^0=15
+    */
+    /* font-size: 43px; */
+}
+
+/* Klassenselektor */
+.test-1{
+    font-size: 22px;
+}
+
+/* ID-Selektor */
+#my-first-id{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+}
+
+div p{
+    color: green;
+}
+
+.test-2{
+    font-family: Dosis, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    /* font-weight: bold; */
+    text-decoration: underline;
+    background-color: rgba(0, 255, 255, 0.329);
+}
+
+a{
+    text-decoration: none;
+}

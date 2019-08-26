@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell</title>
+    <style>
+        .test01,
+        .test02,
+        .test03,
+        .test04,
+        .test05 {
+            width: 250px;
+            height: 250px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .test01 {
+            border: 2px solid green;
+        }
+
+        .test02 {
+            border: 2px solid red;
+            /* margin: 50px; */
+            /* margin-top: 50px; */
+            /* margin: 5px 50px 100px 0; */
+
+            margin: 50px 100px;
+
+            /*  margin: 0 auto; */
+        }
+
+        .test03 {
+            border: 2px solid blue;
+        }
+
+        .test04 {
+            border: 2px solid darkorchid;
+            padding: 20px;
+        }
+
+        .test05{
+            border: 2px solid gold;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="test01"></div>
+        <div class="test02"></div>
+        <div class="test03"></div>
+    </div>
+    <div class="test04">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore doloremque distinctio tempore dolorum minima
+        dicta, perspiciatis asperiores necessitatibus a officiis?
+    </div>
+    <div class="test05">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dicta ad quos commodi, voluptas facilis vero
+        vel reprehenderit dolores natus?
+    </div>
+</body>
+
+</html>

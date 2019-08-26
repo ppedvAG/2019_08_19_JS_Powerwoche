@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>on()-Methode</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn-ok">OK</button>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+
+    <script>
+        $(document).ready(function () {
+
+            /* document.getElementById('my-id').addEventListener('click', function(){//ganz toller Code}); */
+
+            $('#btn-ok').on('click', function () {
+                alert('Juhuu! Es funktioniert!');
+            });
+
+            // Syntax:  **********************************************************************
+
+            /* 
+
+            $(selector).on({
+                event1: function () {
+                    // toller Code; was soll passieren, wenn event1 stattfindet?
+                },
+                event2: function () {
+                    // toller Code
+                }
+            }); 
+            
+            */
+
+            // Beispiel:  ********************************************************************
+
+            $('#demo01').on({
+
+                click: function () {
+                    $(this).css('background-color', 'green');
+                },
+                mouseleave: function () {
+                    $('#demo03').css('background-color', 'blue');
+                    alert('Super!');
+                }
+
+            });
+
+            // selbstgebautes Hover:
+
+            $('#demo02').on({
+
+                mouseenter: function () {
+                    $(this).css('background-color', 'gold');
+                },
+                mouseleave: function () {
+                    $(this).css('background-color', 'red');
+                }
+
+            });
+
+
+            // Hover-Effekt von jQuery:
+            // 2 Funktionen übergeben; 
+            // 1. Funktion sagt, was passiert bei mouseenter
+            // 2. Funktion sagt, was passiert bei mouseleave
+
+            $('#demo04').hover(
+                function(){
+                    $(this).css('background-color', 'chartreuse');
+                },
+                function(){
+                    $(this).css('background-color', 'initial');
+                }
+            );
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>filter()</title>
+</head>
+<body>
+    <input type="text" id="inp-cities">
+    <ul id="l-cities">
+        <li>Aachen</li>
+        <li>Berlin</li>
+        <li>Coburg</li>
+        <li>Dresden</li>
+        <li>Essen</li>
+        <li>Frankfurt</li>
+    </ul>
+
+    <p class="demo1">Demo-p</p>
+    <p class="demo2">Demo-p</p>
+    <p class="demo3">Demo-p</p>
+    <p class="test">testtext bla bla</p>
+    <p class="test">testtext bla bla</p>
+    <p class="test">testtext bla bla</p>
+    <p class="demo4">Demo-p</p>
+    <script>
+    
+        $(document).ready(function(){
+
+
+            $('#inp-cities').on('keyup', function(){
+
+                var inpVal = $(this).val().toLowerCase();
+
+                $('#l-cities>li').filter(function(){
+                    $(this).toggle($(this).text().toLowerCase().indexOf(inpVal) > -1);
+                });
+
+            });
+
+
+            $('p').filter('.test').css('color', 'red');
+
+
+
+
+
+        });
+
+
+    </script>
+</body>
+</html>

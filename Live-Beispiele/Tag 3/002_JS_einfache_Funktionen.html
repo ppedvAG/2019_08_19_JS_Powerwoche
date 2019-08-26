@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>einfache Funktionen</title>
+    <style>
+        #demo01 {
+            min-height: 200px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo01" onclick="setBgRed()"></div>
+    <button id="btn-ok">OK</button>
+    <button id="btn-insert" onclick="insertText()">Insert</button>
+    <div id="demo02">Dieser Text steht von Anfang an hier.</div>
+
+
+
+
+    <script>
+
+        var demoDiv01 = document.getElementById('demo01');
+
+        function setBgRed() {
+
+            demoDiv01.style.backgroundColor = 'red';
+
+            console.log(demoDiv01.style.backgroundColor);
+
+            /* demoDiv01.innerHTML = '<p>' + "Testtext" + '</p>'; */
+
+            demoDiv01.innerHTML += '<p>' + "Testtext" + '</p>';
+        }
+
+
+        function setBgGreen() {
+            demoDiv01.style.backgroundColor = "green";
+        }
+        /* document.getElementById('btn-ok').addEventListener('click', function () {
+            demoDiv01.style.backgroundColor = "green";
+            alert('Achtung alles wird grün!');
+        }); */
+
+        document.getElementById('btn-ok').addEventListener('click', setBgGreen); // hier keine Parameterklammern bei Funktion
+
+
+        var nettoPreis = 125.00;
+
+        function bruttoRechner(netto) {
+
+            var brutto = netto * 1.19;
+            return brutto;
+
+        }
+
+        var bruttoPreis = bruttoRechner(nettoPreis);
+        demoDiv01.innerHTML += '<p>' + bruttoPreis + '</p>';
+
+
+        /* document.getElementById('inp-first-name').value; */
+
+        /* function call / Funktionsaufruf */
+
+        // setBgRed();
+
+
+        // console.log(document.getElementById('demo02').innerHTML);
+
+        function insertText() {
+            var demoDiv02 = document.getElementById('demo02');
+
+            demoDiv01.innerHTML = demoDiv02.innerHTML;
+
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

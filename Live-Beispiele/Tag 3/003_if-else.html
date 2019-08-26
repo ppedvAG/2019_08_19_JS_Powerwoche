@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if-else</title>
+    <style>
+        #demo01 {
+            min-height: 50px;
+            border: 2px solid green;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inp-test" class="my-inputs" name="inp-test">
+    <div id="demo01"></div>
+    <button id="btn-ok" onclick="testX()">OK</button>
+
+
+    <script>
+        var inpTest = document.getElementById('inp-test');
+        var demo01 = document.getElementById('demo01');
+        var btnOk = document.getElementById('btn-ok');
+
+        var x = 5;
+        var y = 3;
+        
+
+        function testX() {
+
+            var inp = inpTest.value;
+
+            if (inp > 5) {
+                demo01.style.backgroundColor = "chartreuse";
+                demo01.innerHTML = 'Grün!';
+            }
+            else if (inp < 5) {
+                demo01.style.backgroundColor = "cadetblue";
+                demo01.innerHTML = 'Blau!';
+            }
+            else {
+                demo01.style.backgroundColor = "firebrick";
+                demo01.innerHTML = 'Rot!';
+            }
+        }
+
+
+
+       // (x == y) ? alert('Stimmt!') : alert('Stimmt nicht!');
+
+
+       // console.log(isNaN(x));
+
+       // inp == ""  // Leerstring
+
+
+       
+
+    </script>
+</body>
+
+</html>

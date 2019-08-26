@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Schleifen</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+
+    <script>
+        var demoDiv = document.getElementById('demo');
+
+        var text = "";
+
+        /* WHILE SCHLEIFE ******************************************************* */
+
+
+        /* 
+        
+        var i = 0;  //iterator (Zähler)
+
+        while(i < 10){
+
+            text += 'Wert: ' + i + '<br/>';
+            i++;  // wichtig! sonst Endlosschleife!!
+
+        } 
+        
+        */
+
+
+
+
+        /* FOR SCHLEIFE *************************************************************** */
+
+
+
+        for(var i = 0; i < 10; i++){
+            text += 'Wert: ' + i + '<br/>';
+        }
+
+
+        demoDiv.innerHTML = text;
+
+    
+    </script>
+</body>
+</html>

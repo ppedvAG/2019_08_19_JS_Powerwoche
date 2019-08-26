@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch-case</title>
+    <style>
+        input{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inp-day-of-week" class="my-inputs" name="inp-day-of-week">
+    <button id="btn-ok" onclick="checkDow()">OK</button>
+    <div id="demo01"></div>
+
+
+    <script>
+        var dow = document.getElementById('inp-day-of-week');
+        var btnOk = document.getElementById('btn-ok');
+        var demoDiv = document.getElementById('demo01');
+
+        var text = "";
+
+
+        function checkDow(){
+            
+            var inp = dow.value.toLowerCase();
+
+
+            switch(inp){
+
+                case 'montag':
+                    text = 'Das ist der erste Arbeitstag.';
+                    break;
+                case 'dienstag': 
+                    text = 'Das ist der zweite Arbeitstag.';
+                    break;
+                case 'sonntag': 
+                    text = 'Juhuuu Wochenende!';
+                    break;
+                default: 
+                    text = 'Bitte geben Sie einen Wochentag ein!';
+
+            }
+
+            demoDiv.innerHTML = text;
+
+
+        }
+
+    
+    </script>
+</body>
+
+</html>

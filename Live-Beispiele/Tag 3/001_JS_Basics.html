@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Basics</title>
+    <!-- <link rel="stylesheet" href="dateipfad_zum_css.css"> -->
+    <script src="001_JS_Basics.js" defer></script>
+</head>
+<body>
+    
+    <script>
+        
+        /* Variablen */
+
+        /* Variablendeklaration */
+        
+        var x;
+        var text;
+        var firstName;
+
+        var i, z, fullName;
+
+        /* Initialisierung */
+        x = 5;
+
+        var y = 7;
+        var z;
+
+        x = x *3;
+        // x = 15
+        x = x + 3;
+        // x = 18
+        x = x + y;
+        // x = 18 + 7
+        x = y;
+        // x = 7
+
+        z = x + y;
+        // z = 7 + 7
+
+
+        /* Operatoren */
+
+        // +, -, *, /
+        // ++, --
+        // +=, -=, *=, /=
+
+        x = 5;
+        x = x + 3;
+        // x = 5 + 3
+
+        x += 3;
+        // x = x + 3
+
+        x -= 3
+        // x = x - 3
+
+        i = 0;
+        i = i + 1;
+        i++;
+        // i--;
+
+
+        /*  Vergleichsoperatoren  */
+
+        // ==, !=, <=, >=, 
+        // === fragt auch den Datentyp ab
+        // !== fragt auch den Datentyp ab
+
+        x == y; // ?? das ist die Frage; Antwort: true/false
+
+        x = 5;
+
+        console.log('Wert von x ist derzeit: ' + x + " und Wert von y ist derzeit: " + y);
+
+        console.log("Das ist ein 'Text'.");
+        console.log('Das ist ein "Text".');
+
+
+        /* Logische Operatoren */
+
+        // &&, ||, !
+
+        x == y && y == z; // zwingend beide müssen zutreffen
+
+        x == y || x == z; // mindestens eins oder auch beide müssen zutreffen
+        x != y 
+
+        // (x == y && x == z) || (...)
+
+
+        /* Datentypen */
+
+        // number -- alle Zahlen, auch mit Nachkommastellen
+        x = 5;
+        x = 5.5;
+        var c = 123e5; //12300000
+        var d = 123e-5; // 0.00123
+
+        // String
+        firstName = 'Leo';
+        var lastName = 'Hlavin';
+        var fullName = firstName + ' ' + lastName;
+
+        // console.log(firstName + ' ' + lastName);
+        console.log('Der volle Name lautet: ' + fullName + '.');
+
+
+        // Boolean - true oder false
+
+        console.log(x == y);
+
+
+
+        // Object
+
+
+
+        var a = 5;
+        var b = '5';
+
+
+        console.log(a + b);
+        console.log('Datentyp von a ist: ' + typeof a);
+        console.log('Datentyp von b ist: ' + typeof b);
+
+        console.log(a === b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Konstante */
+
+        const mwst = 0.19;
+
+
+
+        
+        
+    </script>
+</body>
+</html>

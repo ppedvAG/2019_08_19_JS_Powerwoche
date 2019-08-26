@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>noconflict()</title>
+</head>
+<body>
+    
+    <div id="demo"></div>
+
+
+    <script>
+        
+       /*  
+       $.noConflict();
+
+        jQuery(document).ready(function(){
+            jQuery(selector).action(function(){
+                jQuery....
+            });
+        });
+         */
+
+        /* 
+         var jq = $.noConflict();
+
+         jq(document).ready(function(){
+             jq(..)
+         }); 
+         */
+
+         $.noConflict();
+         
+         jQuery(document).ready(function($){
+
+            $('#demo').click(function(){
+                $(this).hide();
+            });
+
+
+
+         });
+
+         
+    
+    </script>
+</body>
+</html>

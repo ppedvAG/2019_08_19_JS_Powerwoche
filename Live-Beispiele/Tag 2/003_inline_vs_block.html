@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inline vs block</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding-bottom: 100px;
+        }
+
+        .test01,
+        .test02,
+        .test03,
+        .test04, 
+        .test05 {
+            height: 200px;
+        }
+
+        .test01 {
+            background-color: gold;
+            width: 200px;
+        }
+
+        .test02 {
+            background-color: greenyellow;
+            width: 200px;
+        }
+
+        .test03 {
+            background-color: mediumseagreen;
+        }
+
+        .test04 {
+            background-color: turquoise;
+        }
+
+        .test05 {
+            background-color: steelblue;
+        }
+
+        .inline {
+            display: inline-block;
+            border: 2px solid green;
+            width: 150px;
+        }
+
+        .inp-block{
+            display: block;
+        }
+
+        .img-container{
+            border: 4px groove aquamarine;
+            width: 121px;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test01"></div>
+    <div class="test02"></div>
+    <div class="test03"></div>
+    <div class="test04">
+
+    </div>
+    <div class="test05">
+
+        <a href="">Lorem</a> ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit. Veniam vel suscipit
+        beatae ducimus pariatur.
+        <input type="text"><input type="text">
+
+    </div>
+    <div class="inline"></div>
+    <div class="inline"></div>
+    <label for="" class="inp-block">Vorname: </label><input type="text" class="inp-block">
+    <label for="" class="inp-block">Nachname: </label><input type="text" class="inp-block">
+
+
+    <div class="img-container">
+        <img src="../images/tromboneplayer.jpg" alt="tromboneplayer">
+    </div>
+</body>
+
+</html>

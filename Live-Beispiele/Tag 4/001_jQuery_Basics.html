@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery-Basics</title>
+    <!-- <script src="jquery.js"></script> mitgeliefert, wie normales JS einbinden -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- Versionsnummer! -->
+    <style>
+        #demo{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button id="btn-ok">OK</button>
+
+    <input type="range" min="0" max="100" step="1" >
+
+    <script>
+
+        /* 
+        
+        Grundsyntax:
+
+        jQuery(selector).action();
+        $(selector).action();
+
+        $ steht für die jQuery-Bibliothek, wir rufen sie damit auf
+
+
+        document.getElementById('my-id');
+
+        $('#my-id') - ID
+        $('.my-class')  - Klasse
+        $('p')  - Typselektor
+        $('p[class*="test"]') - Attributselektor, der nach einem Wert sucht, der diese Zeichenfolge enthält
+        $('a[target]') - sucht nach diesen Elementen, wenn sie das Attribut 'target' haben
+        $('p:nth-child(odd)') - wählt jeden ungeraden paragraph aus
+        
+         */
+
+         /*
+         Kurzschreibweise:
+         $(function(){});
+         
+          */
+
+        $(document).ready(function(){
+
+
+            /* document.getElementById('demo').style.backgroundColor = "red"; */
+
+
+            $('#btn-ok').click(function(){
+
+
+                    $('#demo').css('background-color', 'rgb(255, 0, 0)');
+
+
+            });
+
+
+            /* var v = document.getElementById('my-inp').value; */
+
+            $('#my-inp').val();
+
+            // .attr();
+
+            // .innerHTML = ... '<p>Text</p>', 'Text bla bla'
+
+           // .html();
+           // .text('Text');
+           // .text();
+
+           console.log($('#demo').text());
+
+           
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

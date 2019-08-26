@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="myjQuery.js"></script> <!-- lokal, im Webordner -->
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn-ok">OK</button>
+    <div id="demo"></div>
+
+    <script>
+    
+        $(document).ready(function(){
+
+            $.fn.setBorder = function(){
+
+                this.css({
+                    width: '200px',
+                    height: '200px',
+                    border: '2px solid green'
+                });
+
+                return this;
+
+            }
+
+
+
+            $('#btn-ok').click(function(){
+
+                    $('#demo').setBorder().addClass('test');
+
+            });
+            
+
+
+
+
+
+
+
+
+
+
+        });
+    
+    </script>
+</body>
+</html>

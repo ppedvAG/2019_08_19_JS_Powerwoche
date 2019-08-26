@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selektoren</title>
+    <style>
+        /* Typ-, Klassen-, ID-Selektor */
+
+        div {
+            border: 2px solid black;
+        }
+
+        section {
+            border: 2px solid red;
+        }
+
+        /* Universalselektor */
+
+        /*  
+            *{
+                    
+              } 
+        */
+
+        /* Attributselektoren */
+
+        /* sucht nach einem bestimmten Attribut */
+        a[target] {
+            text-decoration: none;
+        }
+
+        /* sucht nach einem bestimmten Wert */
+        a[target="_blank"] {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* muss mit bestimmter Zeichenfolge beginnen */
+        p[class^="demo"] {
+            color: chartreuse;
+        }
+
+        /* muss mit bestimmter Zeichenfolge enden */
+        p[class$="st"] {
+            font-style: italic;
+        }
+
+        /* muss bestimmte Zeichenfolge irgendwo enthalten */
+        p[class*="test"] {
+            color: crimson;
+        }
+
+        /* muss bestimmtes Wort enthalten */
+        p[class~="test"] {
+            color: blue;
+        }
+
+
+        /* Kombinatoren */
+
+        /* Nachfahren-Kombinator / descendant selector */
+
+        div span {
+            color: gold;
+        }
+
+
+
+        /* Kind Kombinator / child selector */
+
+        div>span {
+            font-size: 43px;
+        }
+
+
+        /* Geschwister-Kombinator / sibling selector */
+
+        /* benachbarten Geschwister-Kombinator / adjacent sibling selector */
+
+        div+p {
+            text-decoration: underline;
+        }
+
+        /* allgemeiner Geschwister-Kombinator  */
+
+        div~p {
+            background-color: burlywood;
+        }
+
+
+        /* Pseudoklassen */
+
+        div:hover {
+            cursor: pointer;
+            background-color: lightgoldenrodyellow;
+        }
+
+        a:hover {
+            color: gold;
+        }
+
+
+        /* 
+        input:checked {...}
+
+        input:disabled {...}
+        
+         */
+
+        /* Pseudoelemente */
+
+        .first::after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid blue;
+        }
+
+        /* .first{
+            border: 5px solid gold;
+        } */
+
+
+        .first::first-letter {
+            font-family: Parchment, serif;
+            font-size: 43px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <p class="demo01">
+                <a href="#" target="_blank">Lorem,</a> ipsum dolor sit <a href="#" target="_blank">amet</a> consectetur
+                adipisicing elit. A, odio?
+            </p>
+            <p class="demo02">Lorem <a href="#" target="_self">ipsum</a> dolor sit amet consectetur adipisicing elit.
+                Ad,
+                officiis.</p>
+            <p class="demo03">Lorem ipsum dolor sit amet <a href="#">consectetur</a> adipisicing elit. Suscipit,
+                voluptatibus.</p>
+            <p class="demo04">
+                <span>Lorem ipsum dolor sit,</span> amet consectetur adipisicing elit. Minima, labore.
+            </p>
+        </div>
+
+        <p class="demo05">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, non.</p>
+        <p class="first">
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ducimus?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa laboriosam accusantium deserunt deleniti
+            animi voluptate velit commodi neque sunt sequi.
+
+        </p>
+        <p class="second-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, molestiae!</p>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+        <p class="third-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic.</p>
+    </section>
+
+    <p class="third-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic.</p>
+    <p class="third-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic.</p>
+    <p class="third-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic.</p>
+    <p class="third-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic.</p>
+
+</body>
+
+</html>

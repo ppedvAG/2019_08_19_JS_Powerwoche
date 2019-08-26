@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Traversing</title>
+</head>
+<body> 
+    <div>Lorem ipsum dolor sit amet.</div>
+    <h1>ÜÜÜÜÜberschrift</h1>
+    <div id="demo01">Das ist Div Nr. 01.</div>
+    <div id="demo02">Das ist Div Nr. 02.</div>
+    <div id="demo03">Das ist Div Nr. 03.</div>
+    <div id="demo04">Das ist Div Nr. 04.</div>
+    <div id="demo05">Das ist Div Nr. 05.</div>
+    <div id="container">
+        <div class="inner-div01">Das ist inner Div Nr.01</div>
+        <div class="inner-div02">Das ist inner Div Nr.02</div>
+        <div class="inner-div03">Das ist inner Div Nr.03</div>
+    </div>
+    <h2>H2 Überschrift</h2>
+    <p>Testtext 01</p>
+    <p>Testtext 02</p>
+    <p>Testtext 03</p>
+    <p>Testtext 04</p>
+    <p>Testtext 05</p>
+    
+
+    <script>
+
+        $(document).ready(function(){
+
+            
+            $('#demo01').next().css('color', 'red');
+
+            $('#demo03').siblings().css('font-style', 'italic');
+
+            $('#demo03').nextAll().css('text-decoration', 'underline');
+
+            $('#demo03').nextUntil('h2').css('background-color', 'green');
+
+
+            // .prev();
+            // .prevAll();
+            // .prevUntil();
+
+
+            $('#container').children().css('background-color', 'blue');
+
+            // .parent();
+
+
+            // $('table>tbody>tr>td>a')  wählt Links in Tabelle an
+
+            // $('h1~div').css('background-color', 'green'); // die nachfolgenden!
+
+            // h1~p
+            
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+</html>

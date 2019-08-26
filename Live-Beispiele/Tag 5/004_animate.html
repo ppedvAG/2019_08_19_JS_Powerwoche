@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>animate()</title>
+
+    <style>
+        /* body{
+            height: 100vh;
+        } */
+        button{
+            margin-bottom: 20px;
+        }
+        #demo {
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            border: 2px solid darkcyan;
+            position: relative;
+            opacity: 1;
+            display: none;
+        }
+        /* .container{
+            height: 100vh;
+        } */
+    </style>
+</head>
+
+<body>
+<!-- <div class="container"> -->
+    <button id="btn-ok">OK</button>
+    <div id="demo"></div>
+<!-- </div> -->
+    <script>
+        // Kurzschreibweise für $(document).ready(function(){...});
+        $(function(){
+
+            $('#btn-ok').click(function(){
+
+            // .fadeIn(2000);
+
+                $('#demo')
+                .fadeIn(1000)
+                .animate({
+                    width: '400px',
+                    height: '400px',
+                    top: '300px'
+                }, 2000)
+                .animate({
+                    borderRadius: '50%'
+                })
+                .animate({
+                    opacity: '0'
+                }, 2000);
+
+            });
+
+
+
+        });
+    
+    </script>
+</body>
+
+</html>

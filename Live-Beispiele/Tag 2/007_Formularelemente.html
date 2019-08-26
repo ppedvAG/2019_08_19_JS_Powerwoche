@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularelemente</title>
+    <style>
+        .inp-styling {
+            /* border: 2px solid green; */
+            /* background-color: aqua; */
+        }
+
+        .comment {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="POST">
+        <div class="inp-container">
+            <label for="first-name">Vorname:</label>
+            <input type="text" id="first-name" class="inp-styling" name="firstName" placeholder="Max">
+        </div>
+        <div class="inp-container">
+            <label for="last-name">Nachname:</label>
+            <input type="text" id="last-name" class="inp-styling" name="last-name" placeholder="Mustermann" required>
+        </div>
+        <div class="inp-container">
+            <label for="phoneno">Tel:</label>
+            <input type="tel" id="phoneno" class="inp-styling" name="phoneno">
+        </div>
+        <div class="inp-container">
+            <label for="age">Alter:</label>
+            <input type="number" id="age" class="inp-styling" name="age">
+        </div>
+        <div class="inp-container">
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" class="inp-styling" name="password">
+        </div>
+        <div class="inp-container">
+            <label for="color">Lieblingsfarbe:</label>
+            <input type="color" id="color" class="inp-styling" name="color">
+        </div>
+        <div class="inp-container">
+            <label for="range">bis:</label>
+            <input type="range" id="range" class="inp-styling" name="range">
+        </div>
+        <div class="inp-container">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" class="inp-styling" name="email">
+        </div>
+        <div class="inp-container">
+            <label for="url">Homepage:</label>
+            <input type="url" id="url" class="inp-styling" name="url" title="...muss https:// enthalten"
+                value="https://">
+        </div>
+
+        <textarea name="comment" id="comment" class="comment" cols="30" rows="10"
+            placeholder="Geben Sie hier bitte... ein."></textarea>
+
+        <!-- inp type radio für Einfachauswahl -->
+        <div class="inp-container">
+            <input type="radio" name="pizza" id="margherita" checked><label for="margherita">Margherita</label>
+        </div>
+        <div class="inp container">
+            <input type="radio" name="pizza" id="tonno"><label for="tonno">Tonno</label>
+        </div>
+        <div class="inp-container">
+            <input type="radio" name="pizza" id="dellacasa"><label for="dellacasa">Della Casa</label>
+        </div>
+        </div>
+        <!-- checkbox für Mehrfachauswahl -->
+        <div class="inp-container">
+            <input type="checkbox" name="extras" id="corn"><label for="corn">Mais</label>
+        </div>
+        <div class="inp container">
+            <input type="checkbox" name="extras" id="rucola"><label for="rucola">Rucola</label>
+        </div>
+        <div class="inp-container">
+            <input type="checkbox" name="extras" id="salami"><label for="salami">Salami</label>
+        </div>
+        <div class="inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset">
+        </div>
+
+        <select name="" id="">
+            <option value="Margherita">Margherita</option>
+            <option value="Tonno">Tonno</option>
+            <option value="Della Casa">Della Casa</option>
+        </select>
+
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>
